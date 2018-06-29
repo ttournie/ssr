@@ -9,7 +9,7 @@ const app = new Express();
 const server = new http.Server(app);
 
 // Main route for pages
-app.use(Express.static(path.resolve(__dirname, "../../build")));
+app.use(Express.static(path.resolve(__dirname, "../../build/static")));
 app.get("*", controller());
 
 // Start the HTTP server
