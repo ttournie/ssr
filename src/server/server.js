@@ -8,8 +8,9 @@ const isProd = process.env.NODE_ENV === "production";
 const app = new Express();
 const server = new http.Server(app);
 
-// Main route for pages
-app.use(Express.static(path.resolve(__dirname, "../../build")));
+// Render all the static files
+app.use(Express.static("../"));
+// Main controller
 app.get("*", controller());
 
 // Start the HTTP server
